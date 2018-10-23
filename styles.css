@@ -31,8 +31,9 @@ body, input {
   position: relative;
   left: 2px;
   bottom: 2px;
-  box-shadow: 2px 2px 0 #333;
+  background-color: lightblue;
 }
+
 /* =d divs
 ------------------------------*/
 div {
@@ -43,13 +44,9 @@ div {
   text-align: left;
 }
 
-.box, .textBox {
+.box {
   border: 2px solid;
   border-radius: 5px;
-}
-
-.textBox {
-  height: 63%;
 }
 
 .num {
@@ -68,9 +65,15 @@ div {
   box-shadow: 2px 2px 0 #333;
 }
 
-#systolic, #diastolic, #co2, #bloodSugar, #pulse, #pain, #resp, #temp, #spo2 {
+/* #systolic, #diastolic, #co2, #bloodSugar, #pulse, #pain, #resp, #temp, #spo2 {
   padding: 0.5em 0 0 0.5em;
-}
+} */
+
+/* .textBox {
+  height: 63%;
+} */
+
+
 
 .time {
   margin: 5px;
@@ -96,6 +99,21 @@ input:focus {
   border: 2px solid #ff0000;
 }
 
+textarea {
+  border: 2px solid ;
+  border-radius: 5px;
+  font-size: 45px;
+  height: 68px;
+  width: 196px;
+  text-align: center;
+  text-shadow: none;
+  font-weight: bold;
+
+}
+
+.labelBox {
+  margin-left: 0.5em;
+}
 
 /* =hd header
 ------------------------------*/

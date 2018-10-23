@@ -2,9 +2,15 @@ $(document).ready(function() {
   `use strict`;
 
   $(`.num`).on(`click`, function() {
-    let num = $(`num`);
-    num.animate({left: '20px'}, 100);
-    num.animate({right: '2px'}, 100);
+    $(this).addClass(`push`);
+    setTimeout(function(){
+      $(`.num`).removeClass(`push`);
+    }, 200);
+
+    let con = $(this).html();
+    console.log(con);
+    let atrib = $(this).attr();
+    console.log(`attr= ` + atrib);
 
   });
 
