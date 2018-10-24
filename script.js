@@ -3,7 +3,7 @@ $(document).ready(function() {
   // resizer
   $(window).on('resize', function() {
   var win = $(this);
-  if (win.width() > 600) {
+  if (win.width() > 800) {
 
     $(`.one1123`).addClass(`marbot20`);
 
