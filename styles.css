@@ -33,9 +33,15 @@ body, input {
   bottom: 2px;
   background-color: lightblue;
 }
+.marbot20{
+    margin-bottom: 20px;
+}
 
 /* =d divs
 ------------------------------*/
+.one1123 {
+  font-size: 16px;
+}
 
 .baseTime {
   padding: 2em 0;
@@ -45,10 +51,6 @@ body, input {
 .box {
   border: 2px solid;
   border-radius: 5px;
-}
-
-div {
-  position: relative;
 }
 
 .num {
@@ -99,11 +101,11 @@ textarea {
   border: 2px solid ;
   border-radius: 5px;
   font-size: 45px;
+  font-weight: bold;
   height: 68px;
-  width: 196px;
   text-align: center;
   text-shadow: none;
-  font-weight: bold;
+  width: 196px;
 }
 
 .labelBox {
@@ -131,4 +133,6 @@ textarea {
 /* =t tables
 ------------------------------*/
 /* =txt text
+------------------------------*/
+/* media queries
 ------------------------------*/

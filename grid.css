@@ -1,11 +1,14 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(8, 100px);
-  grid-auto-rows: 100px;
+  grid-template-rows: 120px repeat(auto);
   grid-gap: 2px;
 }
 
 /* one */
+.one127{
+  grid-area: 1 / 1 / 2 / 7;
+}
 .one123 {
   grid-area: 1 / 1 / 2 / 3;
 }

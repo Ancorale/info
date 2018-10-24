@@ -1,5 +1,16 @@
 $(document).ready(function() {
   `use strict`;
+  // resizer
+  $(window).on('resize', function() {
+  var win = $(this);
+  if (win.width() > 600) {
+
+    $(`.one1123`).addClass(`marbot20`);
+
+  } else {
+    $(`.one1123`).removeClass(`marbot20`);
+  }
+});
 
   // DATE FORMATER
   function convertDate() {
