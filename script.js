@@ -1,25 +1,34 @@
 $(document).ready(function() {
   `use strict`;
+  const boxes = {
+    systolic,
+    diastolic,
+    pulse,
+    respiration,
+    SPO2,
+    CO2,
+    bloodSugar,
+    pain,
+    temperature
+  };
+  let numKey = ``;
+
   // resizer
-  $(window).on('resize', function() {
-  var win = $(this);
-  if (win.width() > 800) {
+  $(document).on('resize', function() {
+    let win = $(this);
+    if (win.width() > 800) {
 
-    $(`.one1123`).addClass(`marbot20`);
+      $(`.one1123`).addClass(`marbot20`);
 
-  } else {
-    $(`.one1123`).removeClass(`marbot20`);
-  }
-});
+    } else {
+      $(`.one1123`).removeClass(`marbot20`);
+    }
+  });
 
   // DATE FORMATER
   function convertDate() {
-    var d = new Date();
-    /*  var a = [(d.getMonth() + 1),
-        (d.getDate()),
-        (d.getFullYear()),
-      ].join('/');  */
-    var b = [(d.getHours()),
+    let d = new Date();
+    let b = [(d.getHours()),
       (d.getMinutes()),
       (d.getSeconds()),
     ].join(':');
@@ -27,22 +36,28 @@ $(document).ready(function() {
   }
   console.log(convertDate());
 
-
   // Time
   $(`#time`).text(convertDate());
 
   // button push
   $(`.num`).on(`click`, function() {
+
     $(this).addClass(`push`);
     setTimeout(function() {
       $(`.num`).removeClass(`push`);
-    }, 200);
+    }, 100);
 
-    let con = $(this).html();
-    console.log(con);
-    let atrib = $(this).attr();
-    console.log(`attr= ` + atrib);
+    numKey += $(this).html();// gets button number
 
+    for (i in boxes) {
+      let c = 0;
+      if (numKey.length < 3) {
+        $(i + c).nextAll('div:first').focus();// sets box
+        $(`#` + i).val(numKey);// set number in box
+      }
+    }
+
+  // end button push
   });
-
+// end doc ready
 });

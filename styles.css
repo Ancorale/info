@@ -7,7 +7,7 @@ Your name:
 * {
   margin: 0;
   padding: 0;
-
+  background-color: #eee;
 }
 /* =ab abbreviation
 ------------------------------*/
@@ -90,7 +90,7 @@ input[type=text], input[type=date] {
 }
 
 input[type=text] {
-  width: 338px
+  width: 330px
 }
 
 input:focus {
@@ -103,9 +103,14 @@ textarea {
   font-size: 45px;
   font-weight: bold;
   height: 68px;
+  resize: none;
   text-align: center;
   text-shadow: none;
   width: 196px;
+}
+
+textarea:focus {
+  border-color: #ff0000;
 }
 
 .labelBox {

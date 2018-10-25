@@ -1,7 +1,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(8, 100px);
-  grid-template-rows: 120px repeat(auto);
+  grid-template-rows: 120px 100px 100px 100px 100px 100px;
   grid-gap: 2px;
 }
 
@@ -104,6 +104,10 @@
 }
 .seven688 {
   grid-area: 7 / 6 / 8 / 8;
+}
+.seven787 {
+  grid-area: 7 / 7 / 8 / 7;
+  height: 75px;
 }
 
 /* eight */
