@@ -1,5 +1,8 @@
 $(document).ready(function() {
   `use strict`;
+
+
+
   const boxes = {
     systolic,
     diastolic,
@@ -14,12 +17,10 @@ $(document).ready(function() {
   let numKey = ``;
 
   // resizer
-  $(document).on('resize', function() {
+  $(window).on('resize', function() {
     let win = $(this);
-    if (win.width() > 800) {
-
+    if (win.width() < 800) {
       $(`.one1123`).addClass(`marbot20`);
-
     } else {
       $(`.one1123`).removeClass(`marbot20`);
     }
@@ -39,25 +40,34 @@ $(document).ready(function() {
   // Time
   $(`#time`).text(convertDate());
 
+  // textarea
+  // $(`textarea`).on('change focus', function() {
+  //   var txArea = $(this).val() + " &#64; ";
+  //   var itemTime = convertDate() + " &#13; ";
+  //   var itemName = $(this).prop('id');
+  //   var item = {};
+  //   item[itemName] = txArea;
+  //   item["TIME"] = itemTime;
+  //   myItem.push(item);
+  //   localStorage.setItem('report', JSON.stringify(myItem));
+  //   console.log(myItem);
+  // });
+
   // button push
   $(`.num`).on(`click`, function() {
+    $(`textarea`).on('focus', function() {
+      if (numKey.length <= 3) {
+        console.log(numKey.length);
+        $(this).val(numKey);// set number in box
+      }
+    })
 
     $(this).addClass(`push`);
-    setTimeout(function() {
-      $(`.num`).removeClass(`push`);
-    }, 100);
-
+      setTimeout(function() {
+        $(`.num`).removeClass(`push`);
+      }, 100);
     numKey += $(this).html();// gets button number
 
-    for (i in boxes) {
-      let c = 0;
-      if (numKey.length < 3) {
-        $(i + c).nextAll('div:first').focus();// sets box
-        $(`#` + i).val(numKey);// set number in box
-      }
-    }
+  });// end button push
 
-  // end button push
-  });
-// end doc ready
-});
+});// end doc ready
