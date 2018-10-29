@@ -1,20 +1,18 @@
 $(document).ready(function() {
   `use strict`;
 
-
-
+  let numKey = ``;
   const boxes = {
-    1: `systolic`,
-    2: `diastolic`,
-    3: `pulse`,
-    4: `respiration`,
-    5: `SPO2`,
-    6: `CO2`,
-    7: `bloodSugar`,
-    8: `pain`,
-    9: `temperature`
+    0: `#systolic`,
+    1: `#diastolic`,
+    2: `#pulse`,
+    3: `#respiration`,
+    4: `#SPO2`,
+    5: `#CO2`,
+    6: `#bloodSugar`,
+    7: `#pain`,
+    8: `#temperature`
   };
-
 
   // resizer
   // $(window).on('resize', function() {
@@ -29,51 +27,50 @@ $(document).ready(function() {
   // DATE FORMATER
   function convertDate() {
     let d = new Date();
-    let b = [(d.getHours()),
-      (d.getMinutes()),
-      (d.getSeconds()),
-    ].join(':');
-    return (b + ' ');
+    let b = [d.getHours(), d.getMinutes(), d.getSeconds()].join(":");
+    return b + " ";
   }
   console.log(convertDate());
 
   // Time
   $(`#time`).text(convertDate());
-
-  let numKey = ``;
-  // button push
+  let c = 0;
+  //button push
   $(`.num`).on(`click`, function() {
+    // gets textarea id
     let textareaId = $(`textarea`).attr(`id`);
 
+    // moves and colors buttons
     $(this).addClass(`push`);
     setTimeout(function() {
       $(`.num`).removeClass(`push`);
-    }, 100);
+    }, 50);
 
-    numKey += $(this).html(); // gets button number
-    console.log(typeof(numKey));
+    // gets number,
+    // adds follow up clicks
+    numKey += $(this).html();
 
-    let c = 1;
+    console.log(numKey, typeof numKey);
 
-    for (i in boxes){
+    // i loop through boxes
+    for (i = 0; i < 8; i++) {
+      console.log(boxes[i + c], i, c);
 
-      if (numKey.length <= 3) {
-        console.log(c);
-        $(`#` + boxes[c]).val(numKey); // set number in box
-
+      // sets numKey to three then breaks
+      if (numKey.length < 4) {
+        $(boxes[i + c]).val(numKey);
+        return;
       }
-      else {
-        numKey = ``;
-        c++;
+      c++;
+      numKey = ``;
+    } // end i loop
+    ////// end numbers
 
-        $(`#` + boxes[c]).val(numKey);
-          console.log(boxes[c]);
-
-      }
-
-    }// end for i
-
-
+    //// textarea
+    $(`textarea`).focus(function() {
+      $(`.num`).onclick(function() {
+        numKey += $(this).html();
+      });
+    });
   }); // end button push
-
 }); // end doc ready
