@@ -10,32 +10,35 @@
 
   </head>
 
-  <body class="greyBack">
+  <body class="center">
+    <header>
+      <h1>Report</h1>
+    </header>
 
     <div class="container">
       <hr>
       <legend>
-        <h1>Narrative</h1>
+        Narrative
       </legend>
       <hr>
-      <form action="sent.php" method="post" id="reportData" name="reportData">
+      <form action="sent.php" method="post" id="reportData" name="reportData" >
 
-        <textarea  name="reportData" id="areport" class="boxReSizer"></textarea>
+        <textarea  name="areport" id="areport" class="boxReSizer"></textarea>
         <hr />
-        <span style="color:red" class="flashRed">
+        <span style="color:red" class="flashRed small">
         WARNING&colon;<br>
         Ensure email addresses are correct.<br>Data may not be recoverable once sent.
         </span>
-        <br><br>
+        <br>
         <input placeholder="RECIPIENT EMAIL" class="tac" type="email" name="first" autocomplete='email' >
         <br>
         <input placeholder="RECIPIENT EMAIL" class="tac" type="email" name="second" autocomplete='email'>
         <br><hr>
-        <button class="box num" input type="submit" name='send'>SEND</button>
+        <button id="send" class="box " input type="submit" name='send'>SEND</button>
         <hr>
-        <input type="button" value="BACK" id="back" onclick="history.back()" class="box num">
+        <button id="back" class="box " type="button" value="BACK"  onclick="history.back()" >BACK</button>
         <hr>
-        <div class="fs12">
+        <div class="small">
           &emsp;Suggestions, errors or bugs?
           <br>
           <a href="mailto:wb@ancorale.com?Subject=CCEMP%20Help" style="color:#000; background-color: #fff " target="_top">Click here to let me know at wb&commat;ancorale.com</a>
@@ -49,13 +52,7 @@
         </div>
         <script type="text/javascript">
         let areport = JSON.stringify(localStorage.getItem("report"));
-        areport = areport.replace(/\\|\{|\}|\[|\]|\\|,|\"|null/g, "");
-      //  let firstSplit = areport.split(':'),
-      //      incidentName = firstSplit[0],
-      //      secondHalf = firstSplit[1],
-      //      secondSplit = secondHalf.split('&#64;'),
-      //      incidentNo = secondSplit[0];
-
+        areport = areport.replace(/\\|\{|\}|\[|\]|\\|,|\"|\#|null/g, "");
 
         document.getElementById('areport').innerHTML = areport;
         </script>

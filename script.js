@@ -15,6 +15,14 @@ $(document).ready(function() {
     8: `#temperature`
   };
 
+  // report window resizer
+  $('.boxReSizer').each(function() {
+    this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+  }).on('input', function() {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+  });
+
   // resizer
   // $(window).on('resize', function() {
   //   let win = $(this);
@@ -35,6 +43,10 @@ $(document).ready(function() {
     location.reload(true);
   })
 
+  // back button
+  // $(`#back`).click(function(){
+  //   window.history.back()"
+  // })
 
   // DATE FORMATER
   function convertDate() {
@@ -47,6 +59,7 @@ $(document).ready(function() {
   // Time
   $(`#time`).text(convertDate());
   let c = 0;
+
   //button push
   $(`.num`).on(`click`, function() {
     // gets textarea id
@@ -77,9 +90,9 @@ $(document).ready(function() {
       }
 
 
-      // Report
+      // report narrative box
       var item = {};
-    item[box] = numKey + " &#13; ";
+    item[box] = numKey + "  ";
     myItem.push(item);
     localStorage.setItem('report', JSON.stringify(myItem));
     console.log(myItem);

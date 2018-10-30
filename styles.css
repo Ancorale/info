@@ -17,25 +17,43 @@ Your name:
 ------------------------------*/
 /* =b body
 ------------------------------*/
+a {
+  text-decoration: none;
+  color: darkblue;
+}
 body, input {
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 20px;
   margin: 40px;
-
 }
+
 
 /* =c classes
 ------------------------------*/
+.center {
+  text-align: center;
+  /* align-items: center; */
+}
+
+.marbot20{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
 .push {
   position: relative;
   left: 2px;
   bottom: 2px;
   background-color: lightblue;
 }
-.marbot20{
-    margin-bottom: 20px;
-    font-size: 20px;
+
+.small {
+  font-size: 15px;
+}
+
+.tiny {
+  font-size: 10px;
 }
 
 
@@ -54,6 +72,7 @@ body, input {
   border: 2px solid;
   border-radius: 5px;
 }
+
 
 .num {
   font-size: 45px;
@@ -117,6 +136,16 @@ textarea:focus {
 
  #areport{
   font-size: 16px;
+}
+
+#areport {
+  padding: 0 10px;
+}
+
+#back, #send {
+  font-size: 20px;
+  padding: 0 25px;
+  margin: 10px 0;
 }
 
 .labelBox {
