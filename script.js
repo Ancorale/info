@@ -2,6 +2,8 @@ $(document).ready(function() {
   `use strict`;
 
   let numKey = ``,
+    item = {};
+
   myItem = [];
   const boxes = {
     0: `#systolic`,
@@ -32,6 +34,16 @@ $(document).ready(function() {
   //     $(`.one1123`).removeClass(`marbot20`);
   //   }
   // });
+
+  // Name
+  $(`#name`).blur(function() {
+    let name = $(this).val() + ` &#13; `;
+    myItem.push(name);
+    localStorage.setItem('report', JSON.stringify(myItem));
+    console.log(myItem);
+  })
+
+  //
 
   // ok button
   $(`#OK`).click(function(){
@@ -91,7 +103,7 @@ $(document).ready(function() {
 
 
       // report narrative box
-      var item = {};
+
     item[box] = numKey + "  ";
     myItem.push(item);
     localStorage.setItem('report', JSON.stringify(myItem));

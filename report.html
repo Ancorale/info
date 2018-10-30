@@ -53,7 +53,7 @@
         <script type="text/javascript">
         let areport = JSON.stringify(localStorage.getItem("report"));
         areport = areport.replace(/\\|\{|\}|\[|\]|\\|,|\"|\#|null/g, "");
-
+        areport = areport.replace(/&13;/, "");
         document.getElementById('areport').innerHTML = areport;
         </script>
 
