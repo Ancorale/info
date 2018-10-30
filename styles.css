@@ -115,6 +115,10 @@ textarea:focus {
   border-color: #ff0000;
 }
 
+ #areport{
+  font-size: 16px;
+}
+
 .labelBox {
   margin-left: 0.5em;
 }

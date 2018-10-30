@@ -1,7 +1,8 @@
 $(document).ready(function() {
   `use strict`;
 
-  let numKey = ``;
+  let numKey = ``,
+  myItem = [];
   const boxes = {
     0: `#systolic`,
     1: `#diastolic`,
@@ -23,6 +24,17 @@ $(document).ready(function() {
   //     $(`.one1123`).removeClass(`marbot20`);
   //   }
   // });
+
+  // ok button
+  $(`#OK`).click(function(){
+    location.href=`report.html`;
+  })
+
+  // Cancel button
+  $(`#cancel`).click(function(){
+    location.reload(true);
+  })
+
 
   // DATE FORMATER
   function convertDate() {
@@ -54,15 +66,27 @@ $(document).ready(function() {
 
     // i loop through boxes
     for (i = 0; i < 8; i++) {
-      console.log(boxes[i + c], i, c);
+      let box = boxes[c+i];
 
+      console.log(box, i, c);
+      $(box).val(numKey);
       // sets numKey to three then breaks
-      if (numKey.length < 4) {
-        $(boxes[i + c]).val(numKey);
-        return;
+      if (numKey.length <= 2) {
+
+        break;
       }
-      c++;
-      numKey = ``;
+
+
+      // Report
+      var item = {};
+    item[box] = numKey + " &#13; ";
+    myItem.push(item);
+    localStorage.setItem('report', JSON.stringify(myItem));
+    console.log(myItem);
+
+    c++;
+    numKey = ``;
+
     } // end i loop
     ////// end numbers
 

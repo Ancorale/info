@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Report</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="grid.css">
+
+  </head>
+
+  <body class="greyBack">
+
+    <div class="container">
+      <hr>
+      <legend>
+        <h1>Narrative</h1>
+      </legend>
+      <hr>
+      <form action="sent.php" method="post" id="reportData" name="reportData">
+
+        <textarea  name="reportData" id="areport" class="boxReSizer"></textarea>
+        <hr />
+        <span style="color:red" class="flashRed">
+        WARNING&colon;<br>
+        Ensure email addresses are correct.<br>Data may not be recoverable once sent.
+        </span>
+        <br><br>
+        <input placeholder="RECIPIENT EMAIL" class="tac" type="email" name="first" autocomplete='email' >
+        <br>
+        <input placeholder="RECIPIENT EMAIL" class="tac" type="email" name="second" autocomplete='email'>
+        <br><hr>
+        <button class="box num" input type="submit" name='send'>SEND</button>
+        <hr>
+        <input type="button" value="BACK" id="back" onclick="history.back()" class="box num">
+        <hr>
+        <div class="fs12">
+          &emsp;Suggestions, errors or bugs?
+          <br>
+          <a href="mailto:wb@ancorale.com?Subject=CCEMP%20Help" style="color:#000; background-color: #fff " target="_top">Click here to let me know at wb&commat;ancorale.com</a>
+          <br><br>
+          <a href="https://ancorale.com">  &emsp;&copy; Ancorale Digital Design&trade; 2018</a>
+        </div>
+        <hr>
+        <div class="tiny">
+          This application is for informational uses only and is not affiliated or endorsed<br> by any federal, state, county or local municipality or agency.
+        <hr>
+        </div>
+        <script type="text/javascript">
+        let areport = JSON.stringify(localStorage.getItem("report"));
+        areport = areport.replace(/\\|\{|\}|\[|\]|\\|,|\"|null/g, "");
+      //  let firstSplit = areport.split(':'),
+      //      incidentName = firstSplit[0],
+      //      secondHalf = firstSplit[1],
+      //      secondSplit = secondHalf.split('&#64;'),
+      //      incidentNo = secondSplit[0];
+
+
+        document.getElementById('areport').innerHTML = areport;
+        </script>
+
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
