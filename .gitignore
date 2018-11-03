@@ -1,3 +1,7 @@
+.ftpconfig
+.ftpquota
+.htaccess
+
 # Windows thumbnail cache files
 Thumbs.db
 ehthumbs.db

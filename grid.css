@@ -1,8 +1,13 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(8, 100px);
-  grid-template-rows: 105px 100px 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
   grid-gap: 2px;
+}
+
+/* right margin */
+.one889{
+  grid-area: 1 / 8 / 8 / 9;
 }
 
 /* one */

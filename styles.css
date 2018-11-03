@@ -21,19 +21,47 @@ a {
   text-decoration: none;
   color: darkblue;
 }
+
+body {
+  margin: 75px;
+}
+
 body, input {
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 20px;
-  margin: 40px;
+
+}
+
+input {
+  text-align: center;
+}
+
+input::placeholder {
+  color: #222;
+  font-size: 15px;
+  text-align: center;
 }
 
 
 /* =c classes
 ------------------------------*/
+.one889 {
+  /* padding: 10px; */
+}
+
 .center {
   text-align: center;
   /* align-items: center; */
+}
+
+hr {
+  border: 0;
+  border-top: 2px solid #000;
+  display: block;
+  height: 1px;
+  margin: 0.5em 0;
+  padding: 0;
 }
 
 .marbot20{
@@ -90,6 +118,10 @@ body, input {
   box-shadow: 2px 2px 0 #333;
 }
 
+#sentBack {
+  padding: 0 10px;
+  color: #000;
+}
 
 #time {
   margin: 5px;
@@ -102,7 +134,7 @@ body, input {
 ------------------------------*/
 /* =frm form
 ------------------------------*/
-input[type=text], input[type=date] {
+ input[type=text], input[type=date] {
   border: 2px solid;
   border-radius: 5px;
   box-shadow: none;
