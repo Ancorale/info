@@ -22,7 +22,7 @@
          Narrative
       </legend>
       <hr>
-      <form action="sent.php" method="post" id="reportData" name="reportData">
+      <form action="sent.php" method="post" id="reportData" name="reportData" class="center">
 
          <textarea name="reportData" id="areport" class="boxReSizer"></textarea>
          <hr />
@@ -33,7 +33,7 @@
          To Send Report Via Text Message:
 
          <div class="center">
-            <input placeholder="PHONE NUMBER" type="tel" name="phone" class="tac">
+            <input placeholder="PHONE NUMBER" type="tel" name="phone" maxlength="11" class="marCent">
             <label for="cary">CARRIER:</label>
             <select name="cary" size="1" id="cary">
                <option value="att">AT&amp;T
@@ -42,7 +42,7 @@
                <option value="Verizon">Verizon
             </select>
               <br><br>
-            <input placeholder="PHONE NUMBER" type="tel" name="phone1" class="tac">
+            <input placeholder="PHONE NUMBER" type="tel" name="phone1" maxlength="11">
             <label for="cary1">CARRIER:</label>
             <select name="cary1" size="1" id="cary">
                <option value="att">AT&amp;T
@@ -52,9 +52,9 @@
             </select>
             <hr>
             To Send via Email:
-            <input placeholder="RECIPIENT EMAIL" class="tac" type="email" name="first" autocomplete='email'>
+            <input placeholder="RECIPIENT EMAIL" type="email" name="first" autocomplete='email'>
             <br><br>
-            <input placeholder="RECIPIENT EMAIL" class="tac" type="email" name="second" autocomplete='email'>
+            <input placeholder="RECIPIENT EMAIL" type="email" name="second" autocomplete='email'>
          </div>
 
 

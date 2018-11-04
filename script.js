@@ -2,7 +2,8 @@ $(document).ready(function() {
   `use strict`;
 
   let numKey = ``,
-    item = {};
+    item = {},
+    c = 0;
 
   myItem = [];
   const boxes = {
@@ -57,10 +58,7 @@ $(document).ready(function() {
         location.reload(true);
   });
 
-  // back button
-  // $(`#back`).click(function(){
-  //   window.history.back()"
-  // })
+
 
   // DATE FORMATER
   function convertDate() {
@@ -72,13 +70,14 @@ $(document).ready(function() {
 
   // Time
   $(`#time`).text(convertDate());
-  let c = 0;
+
 
   //button push
   $(`.num`).on(`click`, function() {
     // gets textarea id
     let textareaId = $(`textarea`).attr(`id`),
       thisVal = $(this).text();
+      console.log(`thisVal`, thisVal);
 
     // moves and colors buttons
     $(this).addClass(`push`);
@@ -89,35 +88,48 @@ $(document).ready(function() {
     // gets number,
     // adds follow up clicks
     numKey += $(this).html();
+    console.log(`numkey `, numKey);  //////////////////////////////////
 
-    console.log(numKey);  //////////////////////////////////
+
 
     // i loop through boxes
     for (i = 0; i < 8; i++) {
       let box = boxes[c + i];
 
-      console.log(box, i, c); ///////////////////////////////
-      $(box).val(numKey);
-      // sets numKey to three then breaks
-      if (numKey.length <= 2) {
-        break;
+
+      // next
+      if (thisVal === `Next`) {
+         numKey = ``;
+         c++;
+         let boxId = boxes[c + i];
+        $(boxId).addClass(`borRed`);
       }
 
 
+      console.log(box, i, c); ///////////////////////////////
+      $(box).val(numKey);
+
+      // sets numKey to three then breaks
+      if (numKey.length <= 2) {
+
+        break;
+      }
+
+      // if (textareaId ==)
         //textarea
         $(`textarea`).focus(function() {
           let nums = $(this).val() + ` &#13; `,
             text = $(this).attr(`id`) + `:` + `&#13;`;
           myItem.push(text + nums);
           localStorage.setItem("report", JSON.stringify(myItem));
-          console.log(myItem); //////////////////////////////////////
+          console.log(`textarea`, myItem); //////////////////////////////////////
         });
 
         // report narrative box
         item[box] = numKey + "  ";
         myItem.push(item);
         localStorage.setItem("report", JSON.stringify(myItem));
-        console.log(myItem); ////////////////////////////////////////
+        console.log(`nar`, myItem); ////////////////////////////////////////
 
 
       c++;

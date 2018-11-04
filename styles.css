@@ -19,7 +19,7 @@ Your name:
 ------------------------------*/
 a {
   text-decoration: none;
-  color: darkblue;
+  color: red;
 }
 
 body {
@@ -33,21 +33,14 @@ body, input {
 
 }
 
-input {
-  text-align: center;
-}
-
-input::placeholder {
-  color: #222;
-  font-size: 15px;
-  text-align: center;
-}
-
-
 /* =c classes
 ------------------------------*/
 .one889 {
   /* padding: 10px; */
+}
+
+.borRed {
+  border: 2px solid red;
 }
 
 .center {
@@ -68,6 +61,7 @@ hr {
     margin-bottom: 20px;
     font-size: 20px;
 }
+
 
 .push {
   position: relative;
@@ -130,10 +124,29 @@ hr {
   padding-top: 0.25em;
 }
 
+#vital {
+  color: #666;
+}
+
 /* =ftr footer
 ------------------------------*/
 /* =frm form
 ------------------------------*/
+input, select {
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow: none;
+  font-weight: 400;
+  /* margin: auto; */
+}
+
+input::placeholder {
+  color: #222;
+  font-size: 15px;
+  text-align: center;
+}
+
  input[type=text], input[type=date] {
   border: 2px solid;
   border-radius: 5px;
