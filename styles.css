@@ -30,14 +30,10 @@ body, input {
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 20px;
-
 }
 
 /* =c classes
 ------------------------------*/
-.one889 {
-  /* padding: 10px; */
-}
 
 .borRed {
   border: 2px solid red;
@@ -57,12 +53,6 @@ hr {
   padding: 0;
 }
 
-.marbot20{
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
-
 .push {
   position: relative;
   left: 2px;
@@ -81,61 +71,43 @@ hr {
 
 /* =d divs
 ------------------------------*/
-.one1123 {
-  font-size: 16px;
+div label {
+  font-size: 1.5em;
+}
+.baseTime {
+  padding: .5em 0;
+  text-align: left;
+  font-size: 2em;
 }
 
-.baseTime {
-  padding: 2em 0;
-  text-align: left;
+#name, #birthday {
+  font-size: 2em;
 }
 
 .box {
   border: 2px solid;
-  border-radius: 5px;
-}
-
-
-.num {
-  font-size: 45px;
-  text-align: center;
-  display: flex;
-  justify-content:center;
-  flex-direction:column;
-}
-
-.num div:active {
-  border: 2px solid #ff0000;
-  position: relative;
-  left: 2px;
-  bottom: 2px;
-  box-shadow: 2px 2px 0 #333;
-}
-
-#sentBack {
-  padding: 0 10px;
-  color: #000;
 }
 
 #time {
-  margin: 5px;
-  font-size: 45px;
+  font-size: 2.8em;
   text-align: center;
-  padding-top: 0.25em;
-}
-
-#vital {
-  color: #666;
+  padding-top: 0.18em;
+  border-radius: 45px;
 }
 
 /* =ftr footer
 ------------------------------*/
+.footer {
+  text-align: center;
+  font-size: 1.5em;
+}
 /* =frm form
 ------------------------------*/
+
 input, select {
   text-align: center;
   border: 1px solid;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: none;
   font-weight: 400;
   /* margin: auto; */
@@ -148,15 +120,23 @@ input::placeholder {
 }
 
  input[type=text], input[type=date] {
-  border: 2px solid;
-  border-radius: 5px;
+  border: 2px solid #000;
+  border-radius: 25px;
   box-shadow: none;
   margin: 3px 0;
-  padding: 5px;
+  font-size: 35px;
+}
+
+input[type=date] {
+  width: 9em;
 }
 
 input[type=text] {
-  width: 330px
+  width: 10.5em;
+}
+
+input[type=tel] {
+
 }
 
 input:focus {
@@ -164,33 +144,35 @@ input:focus {
 }
 
 textarea {
-  border: 2px solid ;
-  border-radius: 5px;
-  font-size: 45px;
+  border: 2px solid #000;
+  border-radius: 25px;
+  font-size: 2em;
   font-weight: bold;
-  height: 68px;
+  height: 90px;
   resize: none;
   text-align: center;
   text-shadow: none;
-  width: 196px;
-}
-
-textarea:focus {
-  border-color: #ff0000;
+  width: 100%;
+  padding-top:.5em;
 }
 
  #areport{
   font-size: 16px;
+  padding: 0 10px;
 }
 
-#areport {
-  padding: 0 10px;
+#OK, #cancel {
+  text-align: center;
+  font-size: 3.5em;
+  padding-top: .1em;
+  border-radius: 25px;
 }
 
 #back, #send {
   font-size: 20px;
-  padding: 0 25px;
+  padding: 10px 25px;
   margin: 10px 0;
+  border-radius: 15px;
 }
 
 .labelBox {

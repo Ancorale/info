@@ -56,14 +56,13 @@
 
       //mail
       $headers = "From: CCFDInfo.site <ccemlbaw@premium13.web-hosting.com> \r\n";
-      $reEmail = $_POST['reEmail'];
-      $reEmail1 = $_POST['reEmail1'];
+      $reEmail = $_POST['first'];
+      $reEmail1 = $_POST['second'];
       // $cary = 'txt.att.net';
       $phone = $_POST['phone'];
       $txtMsg = $phone . '@' . $cary;
       $phone1 = $_POST['phone1'];
       $txtMsg1 = $phone1 . '@' . $cary1;
-      $msg = "Incident: " . $incident . "\n" . "Name: " . $name . "\n" . "Address: ". $address . "\n" . "DOB: " . $dob . "\n" . "Gender: " . $gender . "\n" . "\n" . $reportData;
       mail($reEmail, " Report", $reportData, $headers);
       mail($reEmail1, " Report", $reportData, $headers);
       mail($txtMsg, " Report", $reportData, $headers);
@@ -76,7 +75,10 @@
     <hr>
     Thank you for using CCFDInfo.site
     <br><hr><br>
-      <a href="https://ccfdinfo.site/" class="box" id="sentBack">BACK TO CCFDInfo.site</a>
+    <div class="box">
+      <a href="https://ccfdinfo.site/">BACK TO <br> CCFDInfo.site</a>
+    </div>
+
       <br><br><hr><br>
     <div class="small">
       Suggestions, errors or bugs?

@@ -42,7 +42,7 @@
                <option value="Verizon">Verizon
             </select>
               <br><br>
-            <input placeholder="PHONE NUMBER" type="tel" name="phone1" maxlength="11">
+            <input placeholder="PHONE NUMBER" type="tel" name="phone1" maxlength="11" size="10">
             <label for="cary1">CARRIER:</label>
             <select name="cary1" size="1" id="cary">
                <option value="att">AT&amp;T
@@ -59,22 +59,25 @@
 
 
          <hr>
-         <button id="send" class="box " input type="submit" name='send'>SEND</button>
+         <button id="send" class="box " type="submit" name='send'>SEND</button>
          <hr>
          <button id="back" class="box " type="button" value="BACK" onclick="history.back()">BACK</button>
          <hr>
-         <div class="small">
-            &emsp;Suggestions, errors or bugs?
-            <br>
-            <a href="mailto:wb@ancorale.com?Subject=CCEMP%20Help" style="color:#000; background-color: #fff " target="_top">Click here to let me know at wb&commat;ancorale.com</a>
-            <br><br>
-            <a href="https://ancorale.com"> &emsp;&copy; Ancorale Digital Design&trade; 2018</a>
-         </div>
-         <hr>
-         <div class="tiny">
-            This application is for informational uses only and is not affiliated or endorsed<br> by any federal, state, county or local municipality or agency.
-            <hr>
-         </div>
+         <footer>
+           <div class="small">
+              &emsp;Suggestions, errors or bugs?
+              <br>
+              <a href="mailto:wb@ancorale.com?Subject=CCEMP%20Help" style="color:#000; background-color: #fff " target="_top">Click here to let me know at wb&commat;ancorale.com</a>
+              <br><br>
+              <a href="https://ancorale.com"> &emsp;&copy; Ancorale Digital Design&trade; 2018</a>
+           </div>
+           <hr>
+           <div class="tiny">
+              This application is for informational uses only and is not affiliated or endorsed<br> by any federal, state, county or local municipality or agency.
+              <hr>
+           </div>
+         </footer>
+
          <script type="text/javascript">
             let areport = JSON.stringify(localStorage.getItem("report"));
             areport = areport.replace(/\\|\{|\}|\[|\]|\\|,|\"|\#|null/g, "");

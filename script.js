@@ -58,6 +58,19 @@ $(document).ready(function() {
         location.reload(true);
   });
 
+  //textarea
+  $(`textarea`).on(`blur`, function() {
+    let nums = $(this).val() + ` &#13; `,
+      text = $(this).attr(`id`) + `:` + `&#13;`;
+    myItem.push(text + nums);
+    localStorage.setItem("report", JSON.stringify(myItem));
+    console.log(`textarea`, myItem);
+    $(this).removeClass(`borRed`);
+  });
+
+  $(`textarea`).focus( function() {
+    $(this).addClass(`borRed`);
+  });
 
 
   // DATE FORMATER
@@ -69,11 +82,21 @@ $(document).ready(function() {
   console.log(convertDate());
 
   // Time
-  $(`#time`).text(convertDate());
+
+  (function(){
+    $(`#time`).text(convertDate());
+    let time = $(`#time`).html() + ` &#13; `;
+    console.log(time);
+    myItem.push(time);
+    localStorage.setItem("report", JSON.stringify(myItem));
+  })();
+
+
+
 
 
   //button push
-  $(`.num`).on(`click`, function() {
+  $(`.box`).on(`click`, function() {
     // gets textarea id
     let textareaId = $(`textarea`).attr(`id`),
       thisVal = $(this).text();
@@ -92,49 +115,39 @@ $(document).ready(function() {
 
 
 
-    // i loop through boxes
-    for (i = 0; i < 8; i++) {
-      let box = boxes[c + i];
+    // // i loop through boxes
+    // for (i = 0; i < 8; i++) {
+    //   let box = boxes[c + i];
+    //
+    //
+    //   // next
+    //   if (thisVal === `Next`) {
+    //      numKey = ``;
+    //      c++;
+    //      let boxId = boxes[c + i];
+    //     $(boxId).addClass(`borRed`);
+    //   }
 
-
-      // next
-      if (thisVal === `Next`) {
-         numKey = ``;
-         c++;
-         let boxId = boxes[c + i];
-        $(boxId).addClass(`borRed`);
-      }
-
-
-      console.log(box, i, c); ///////////////////////////////
-      $(box).val(numKey);
-
-      // sets numKey to three then breaks
-      if (numKey.length <= 2) {
-
-        break;
-      }
-
-      // if (textareaId ==)
-        //textarea
-        $(`textarea`).focus(function() {
-          let nums = $(this).val() + ` &#13; `,
-            text = $(this).attr(`id`) + `:` + `&#13;`;
-          myItem.push(text + nums);
-          localStorage.setItem("report", JSON.stringify(myItem));
-          console.log(`textarea`, myItem); //////////////////////////////////////
-        });
-
-        // report narrative box
-        item[box] = numKey + "  ";
-        myItem.push(item);
-        localStorage.setItem("report", JSON.stringify(myItem));
-        console.log(`nar`, myItem); ////////////////////////////////////////
-
-
-      c++;
-      numKey = ``;
-    } // end i loop
+    //   console.log(box, i, c);
+    //   $(box).val(numKey);
+    //
+    //   // sets numKey to three then breaks
+    //   if (numKey.length <= 2) {
+    //
+    //     break;
+    //   }
+    //
+    //   // if (textareaId ==)
+    //
+    //     // report narrative box
+    //     // item[box] = numKey + "  ";
+    //     // myItem.push(item);
+    //     // localStorage.setItem("report", JSON.stringify(myItem));
+    //     // console.log(`nar`, myItem);
+    //
+    //   c++;
+    //   numKey = ``;
+    // } // end i loop
     ////// end numbers
 
 
