@@ -39,6 +39,11 @@ body, input {
   border: 2px solid red;
 }
 
+.backTo {
+  background-color: yellow;
+  color: blue;
+}
+
 .center {
   text-align: center;
   /* align-items: center; */
@@ -86,12 +91,13 @@ div label {
 
 .box {
   border: 2px solid;
+  border-radius: 25px;
 }
 
 #time {
-  font-size: 2.8em;
+  font-size: 2.5em;
   text-align: center;
-  padding-top: 0.18em;
+  padding-top: .38em;
   border-radius: 45px;
 }
 
@@ -132,11 +138,11 @@ input[type=date] {
 }
 
 input[type=text] {
-  width: 10.5em;
+  width: 10em;
 }
 
-input[type=tel] {
-
+input[type=tel], input[type=email] {
+ width: 100%;
 }
 
 input:focus {
@@ -154,11 +160,16 @@ textarea {
   text-shadow: none;
   width: 100%;
   padding-top:.5em;
+  background-color: yellow;
+}
+
+textarea::placeholder {
+  color: blue;
 }
 
  #areport{
   font-size: 16px;
-  padding: 0 10px;
+  width: 100%
 }
 
 #OK, #cancel {
@@ -168,11 +179,31 @@ textarea {
   border-radius: 25px;
 }
 
+#OK {
+  background-color: green;
+  color: white;
+}
+
+#cancel {
+  background-color: red;
+  color: white;
+}
+
 #back, #send {
   font-size: 20px;
   padding: 10px 25px;
   margin: 10px 0;
   border-radius: 15px;
+}
+
+#send {
+  background-color: green;
+  color: white;
+}
+
+#back {
+  background-color: red;
+  color: white;
 }
 
 .labelBox {

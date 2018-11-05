@@ -71,12 +71,12 @@
       ?>
 
   <div class="center">
-    <h1 class="">Email Sent!</h1>
+    <h1 class="">Report Sent!</h1>
     <hr>
     Thank you for using CCFDInfo.site
     <br><hr><br>
-    <div class="box">
-      <a href="https://ccfdinfo.site/">BACK TO <br> CCFDInfo.site</a>
+    <div class="box backTo">
+      <a href="https://ccfdinfo.site/" class="backTo">BACK TO <br> CCFDInfo.site</a>
     </div>
 
       <br><br><hr><br>
