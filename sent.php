@@ -71,7 +71,7 @@
       ?>
 <body>
 
-
+</body>
   <div class="center">
     <h1 class="">Report Sent!</h1>
     <hr>
@@ -95,7 +95,5 @@
     </div>
     <hr>
   </div>
-  <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
-  </body>
-
+</body>
 </html>
