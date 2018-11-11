@@ -69,6 +69,8 @@
       mail($txtMsg1, " Report", $reportData, $headers);
   }//end of submit
       ?>
+<body>
+
 
   <div class="center">
     <h1 class="">Report Sent!</h1>
@@ -93,4 +95,7 @@
     </div>
     <hr>
   </div>
+  <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+  </body>
+
 </html>
