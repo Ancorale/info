@@ -1,187 +1,107 @@
-/*
-Stylesheet for <filename.html or website>
-Your name:
-*/
-/* =r reset styles
-------------------------------*/
+/* @font-face {
+  src: url("Marsh.otf");
+  font-family: marsh;
+  font-weight: 100;
+
+} */
+
+/* reset---------- */
 * {
   margin: 0;
   padding: 0;
-  background-color: #eee;
-}
-/* =ab abbreviation
-------------------------------*/
-/* =ar article
-------------------------------*/
-/* =as aside
-------------------------------*/
-/* =b body
-------------------------------*/
+  background-color: #bbb;
+  }
+
+/* aaaaa---------- */
 a {
   text-decoration: none;
   color: red;
 }
 
-body {
-  margin: 75px;
+
+/* bbbbb---------- */
+#back {
+  background-color: red;
+  color: white;
 }
 
-body, input {
-  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-/* =c classes
-------------------------------*/
-
-.borRed {
-  border: 2px solid red;
+#back, #send, #ccempLink {
+  font-size: 2rem;
+  padding: .5rem 1rem;
+  margin: 0;
+  border-radius: 10px;
 }
 
 .backTo {
+  margin: 1rem auto;
+  background-color: yellow;
+  border-radius: 10px;
+  width: 75%;
+  border: 2px solid #00f;
+}
+
+.backTo a, .backTo a:link, .backTo a:visited, .backTo a:hover, .backTo a:active {
   background-color: yellow;
   color: blue;
+  text-decoration: none;
 }
 
-.center {
-  text-align: center;
-  /* align-items: center; */
-}
-
-hr {
-  border: 0;
-  border-top: 2px solid #000;
-  display: block;
-  height: 1px;
-  margin: 0.5em 0;
-  padding: 0;
-}
-
-.push {
-  position: relative;
-  left: 2px;
-  bottom: 2px;
-  background-color: lightblue;
-}
-
-.small {
-  font-size: 15px;
-}
-
-.tiny {
-  font-size: 10px;
-}
-
-
-/* =d divs
-------------------------------*/
-div label {
-  font-size: 1.5em;
-}
 .baseTime {
-  padding: .5em 0;
+  /* padding-top: .5em; */
+  margin: auto 0;
   text-align: left;
-  font-size: 2em;
+  font-size: 3em;
+  font-weight: bold;
 }
 
-#name, #birthday {
-  font-size: 2em;
+#birthday { 
+  font-size: 3em;
+  width: 70%;
+  padding: .5rem;
+  background-color: #eee;
+}
+
+.birthLabel {
+  font-size: 3rem;
+  padding-left: .5em;
+
+}
+
+body {
+  margin-left: 5em;
+  margin-top: 2em;
+}
+
+body, input, textarea, button, select {
+  font-family: 'Julius Sans One', sans-serif;
+  font-display: auto;
+}
+
+ body.center hr, body.center input, body.center select {
+  border: 1px solid #00f;
+}
+
+body.center hr {
+  height: 0;
 }
 
 .box {
-  border: 2px solid;
   border-radius: 25px;
+   height: 9rem;
+   font-size: 4rem;
 }
 
-#time {
-  font-size: 2.5em;
-  text-align: center;
-  padding-top: .38em;
-  border-radius: 45px;
+button {
+  outline:none;
 }
 
-/* =ftr footer
-------------------------------*/
-.footer {
-  text-align: center;
-  font-size: 1.5em;
-}
-/* =frm form
-------------------------------*/
 
-input, select {
-  text-align: center;
-  border: 1px solid;
-  border-radius: 20px;
-  box-shadow: none;
-  font-weight: 400;
-  /* margin: auto; */
-}
-
-input::placeholder {
-  color: #222;
-  font-size: 15px;
-  text-align: center;
-}
-
- input[type=text], input[type=date] {
-  border: 2px solid #000;
-  border-radius: 25px;
-  box-shadow: none;
-  margin: 3px 0;
-  font-size: 35px;
-}
-
-input[type=date] {
-  width: 9em;
-}
-
-input[type=text] {
-  width: 10em;
-}
-
-input[type=tel], input[type=email] {
- width: 100%;
-}
-
-input:focus {
-  border: 2px solid #ff0000;
-}
-
-textarea {
-  border: 2px solid #000;
-  border-radius: 25px;
-  font-size: 2em;
-  font-weight: bold;
-  height: 90px;
-  resize: none;
-  text-align: center;
-  text-shadow: none;
-  width: 100%;
-  padding-top:.5em;
-  background-color: yellow;
-}
-
-textarea::placeholder {
-  color: blue;
-}
-
- #areport{
-  font-size: 16px;
-  width: 100%
-}
-
-#OK, #cancel {
+/* ccccc---------- */
+#cancel, #OK, {
   text-align: center;
   font-size: 3.5em;
   padding-top: .1em;
   border-radius: 25px;
-}
-
-#OK {
-  background-color: green;
-  color: white;
 }
 
 #cancel {
@@ -189,48 +109,219 @@ textarea::placeholder {
   color: white;
 }
 
-#back, #send {
-  font-size: 20px;
-  padding: 10px 25px;
-  margin: 10px 0;
-  border-radius: 15px;
+#ccempLink {
+  background-color: #ddd;
 }
 
+#ccempLink a {
+  background-color: #ddd;
+}
+
+.center {
+  text-align: center;
+  margin: 2rem 1rem;
+}
+
+
+
+/* ddddd---------- */
+.disclaimer {
+  font-size: 1em;
+}
+
+/* eeeee---------- */
+
+/* fffff---------- */
+footer {
+  text-align: center;
+  font-size: 1.5em;
+  color: #000;
+  font-weight: bold;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer.nine1108 {
+  font-size: 2em;
+}
+
+form input, form textarea {
+  font-size: 1rem;
+   margin: 0 auto;
+   border-radius: 10px;
+}
+
+form input, form input:focus {
+  outline:none;
+ margin-bottom: .5rem;
+  padding: .5rem;
+  width: 75%;
+}
+
+form textarea {
+  width: 75%;
+  padding: 1rem .5rem;
+}
+
+.fs2 {
+  font-size: 2em;
+}
+
+/* ggggg---------- */
+
+/* hhhhh---------- */
+hr {
+  border: 0;
+  border-top: 2px solid #00f;
+  display: block;
+  height: 1px;
+  margin: 0.5em 0;
+  padding: 0;
+}
+
+/* iiiii---------- */
+input, select {
+  border: 2px solid #00f;
+  border-radius: 20px;
+  box-shadow: none;
+  background-color: #eee;
+}
+
+input {
+  font-size: 4rem;
+  padding: 1rem;
+  text-align: center;
+  width: 20rem;
+
+}
+
+input:focus {
+  border: 2px solid #00f;
+  background-color: yellow;
+  outline:none;
+}
+
+
+/* jjjjj---------- */
+
+/* kkkkk---------- */
+
+/* lllll---------- */
+.labelBox {
+  margin-left: 0.5em;
+}
+
+#letMeNo {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+
+}
+
+/* mmmmm---------- */
+
+/* nnnnn---------- */
+#name {
+  width: 100%;
+  font-size: 4rem;
+  height: 6rem;
+  text-indent: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  /* background-color: #eee; */
+}
+
+#name::placeholder {
+  font-size: 4rem;
+  text-indent: 1rem;
+}
+
+/* ooooo---------- */
+#OK {
+  background-color: green;
+  color: white;
+}
+
+/* ppppp---------- */
+.push {
+  position: relative;
+  left: 2px;
+  bottom: 2px;
+  background-color: lightblue;
+}
+
+/* qqqqq---------- */
+
+/* rrrrr---------- */
+
+/* sssss---------- */
 #send {
   background-color: green;
   color: white;
 }
 
-#back {
-  background-color: red;
-  color: white;
+#sent {
+  margin: 0 auto;
 }
 
-.labelBox {
-  margin-left: 0.5em;
+.small {
+  font-size: .7rem;
 }
 
-/* =hd header
-------------------------------*/
-/* =h headings (h1, h2, etc.)
-------------------------------*/
-/* =i images
-------------------------------*/
-/* =lk links
-------------------------------*/
-/* =l lists
-------------------------------*/
-/* =n nav (navigation)
-------------------------------*/
-/* =p paragraphs
-------------------------------*/
-/* =s section
-------------------------------*/
-/* =sup sup
-------------------------------*/
-/* =t tables
-------------------------------*/
-/* =txt text
-------------------------------*/
-/* media queries
-------------------------------*/
+/* ttttt---------- */
+textarea {
+  border: 1px solid #00f;
+  border-radius: 25px;
+  font-size: 4rem;
+  font-weight: bold;
+  resize: none;
+  text-align: center;
+  text-shadow: none;
+  width: 100%;
+  padding: 2rem 1rem 0 1rem;
+  background-color: #eee;
+}
+
+textarea:focus, textarea:focus::placeholder {
+  background-color: yellow;
+  outline:none;
+}
+
+textarea::placeholder {
+font-size: 3rem;
+}
+
+#time {
+  font-size: 2.5em;
+  text-align: center;
+  margin: auto;
+  padding: 1em .75em;;
+  border: 2px solid;
+  border-radius: 25px;
+  background-color: #eee;
+}
+
+.tiny {
+  font-size: 10px;
+}
+
+#title {
+  font-size: 4rem;
+}
+
+
+/* uuuuu---------- */
+
+/* vvvvv---------- */
+
+/* wwwww---------- */
+
+/* xxxxx---------- */
+
+/* yyyyy---------- */
+
+/* zzzzz---------- */
+
+/* miscs---------- */

@@ -16,7 +16,7 @@
       <h1>Report</h1>
    </header>
 
-   <div class="container">
+   <div class="container-fluid">
       <hr>
       <legend>
          Narrative
@@ -25,15 +25,18 @@
       <form action="sent.php" method="post" id="reportData" name="reportData" class="center">
 
          <textarea name="reportData" id="areport" class="boxReSizer"></textarea>
+
+
+
          <hr />
-         <span style="color:red" class="small">
+         <span style="color:red">
             WARNING:<br>
-            Ensure phone numbers and email addresses are correct. &#10; Data may not be recoverable once sent.</span>
+            Ensure phone numbers and/or email addresses are correct. &#10; Data is not recoverable once sent.</span>
             <hr>
          To Send Report Via Text Message:
 
          <div class="center">
-            <input placeholder="PHONE NUMBER" type="tel" name="phone" maxlength="11" class="marCent">
+            <input placeholder="PHONE NUMBER" type="tel" name="phone" maxlength="11" class="marCent"><br>
             <label for="cary" class="small">CARRIER:</label>
             <select name="cary" size="1" id="cary">
                <option value="att">AT&amp;T
@@ -42,7 +45,7 @@
                <option value="Verizon">Verizon
             </select>
               <br><br>
-            <input placeholder="PHONE NUMBER" type="tel" name="phone1" maxlength="11" size="10">
+            <input placeholder="PHONE NUMBER" type="tel" name="phone1" maxlength="11" size="10"><br>
             <label for="cary1" class="small">CARRIER:</label>
             <select name="cary1" size="1" id="cary">
                <option value="att">AT&amp;T
@@ -59,14 +62,16 @@
 
 
          <hr>
-         <button id="send" class="box " type="submit" name='send'>SEND</button>
+         <button id="send" type="submit" name='send'>SEND</button>
          <hr>
-         <button id="back" class="box " type="button" value="BACK" onclick="history.back()">BACK</button>
+         <button id="back" type="button" value="BACK" onclick="history.back()">BACK</button>
+         <hr>
+         <button id="ccempLink"><a href="https://ccemp.info">Go To CCEMP</a></button>
          <hr>
          <footer>
            <div class="small">
               &emsp;Suggestions, errors or bugs?
-              <br>
+              <br><br>
               <a href="mailto:wb@ancorale.com?Subject=CCEMP%20Help" style="color:#000; background-color: #fff " target="_top">Click here to let me know at wb&commat;ancorale.com</a>
               <br><br>
               <a href="https://ancorale.com"> &emsp;&copy; Ancorale Digital Design&trade; 2018</a>

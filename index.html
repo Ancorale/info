@@ -5,33 +5,49 @@
 	<title>CCFDInfo</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<meta name="descrition" content="Info reminder for CCFD Reports">
-	<meta name="author" content="William Brian">
-	<meta name="theme-color" content="#000">
-
+	<meta name="description" content="A patient information notation app to assist the CCFD report system.">
+	<meta name="author" content="William Brian">	
 
 	<link rel="icon" type="image/ico" href="favicon.ico" />
 	<link rel="stylesheet" href="grid.css">
 	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="theme-color" content="#bbb">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
-</head>
 
+	
+</head>
 <body>
+	<div class="wrapper">
+		<div class="one128 center" id="title">
+			CCFDInfo.site
+			<hr>
+		</div>
+		
+	</div>
 
 	<div class="wrapper">
 		<div class="one889"></div>
-		<div class="baseTime one1123">Time:</div>
-		<div class="one224 box" id="time">TIME</div>
+		
+		<div class="one123 baseTime">Time:</div>
+
+		<div class="one224" id="time">TIME</div>
+
 		<div class="one428">
-			<label for="name">Name</label>
-			<input type="text" name="name" id="name">
+			<input type="text" name="name" id="name" placeholder="Name">
 			<br>
-			<label for="birthday">Birthday</label>
+			<label for="birthday"class="birthLabel">Birthday<br></label>
 			<input type="date" name="birthday" id="birthday">
 		</div>
-
+		
 		<div class="two133">
 			<div class="textBox">
 				<textarea id="systolic" maxlength="3" placeholder="Systolic"></textarea>
@@ -77,26 +93,26 @@
 				<textarea id="temperature" maxlength="3" placeholder="Temperature"></textarea>
 			</div>
 		</div>
-		<div class="eight183 box" id="OK">OK</div>
-		<div class="eight688 box" id="cancel">Cancel</div>
-
-		<footer class="nine1108 footer">
-			<div class="">
-				<br><hr><br>
-				 &emsp;Suggestions, errors or bugs?
-				 <br>
-				 <a href="mailto:wb@ancorale.com?Subject=CCEMP%20Help" style="color:#000; background-color: #fff " target="_top">Click here to let me know at wb&commat;ancorale.com</a>
-				 <br><br>
-				 <a href="https://ancorale.com"> &emsp;&copy; Ancorale Digital Design&trade; 2018</a>
-			</div>
+		<button class="eight194 box" id="OK">OK</button>
+		<button class="eight698 box" id="cancel">CLEAR</button>
+		<br>
+		
+		<footer class="ten1118">
+			<br><hr><br>
+				&emsp;Suggestions, errors or bugs?
+				<br><br>
+				<a href="mailto:wb@ancorale.com?Subject=CCEMP%20Help" id="letMeNo" target="_top">&nbsp;Click here to let me know at wb&commat;ancorale.com&nbsp;</a>
+				<br><br>
+				<a href="https://ancorale.com"> &emsp;&copy; Ancorale Digital Design&trade; 2018</a>
 			<hr>
-			<div class="">
+			<div class="disclaimer">
 				 This application is for informational uses only and is not affiliated or endorsed<br> by any federal, state, county or local municipality or agency.
 				 <hr>
 			</div>
 		</footer>
 	</div>
-
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="sw.js"></script>
 
 </body>
 

@@ -65,12 +65,8 @@ $(document).ready(function() {
     myItem.push(text + nums);
     localStorage.setItem("report", JSON.stringify(myItem));
     console.log(`textarea`, myItem);
-    $(this).removeClass(`borRed`);
   });
 
-  $(`textarea`).focus( function() {
-    $(this).addClass(`borRed`);
-  });
 
 
   // DATE FORMATER

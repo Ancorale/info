@@ -15,6 +15,7 @@
   <link rel="icon" type="image/ico" href="favicon.ico" />
   <link rel="stylesheet" href="grid.css">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
@@ -69,19 +70,18 @@
       mail($txtMsg1, " Report", $reportData, $headers);
   }//end of submit
       ?>
-<body>
+<body id="sent">
 
-</body>
   <div class="center">
     <h1 class="">Report Sent!</h1>
     <hr>
     Thank you for using CCFDInfo.site
-    <br><hr><br>
-    <div class="box backTo">
-      <a href="https://ccfdinfo.site/" class="backTo">BACK TO <br> CCFDInfo.site</a>
+    <hr>
+    <div class="backTo">
+      <a href="https://ccfdinfo.site/">BACK TO <br> CCFDInfo.site</a>
     </div>
 
-      <br><br><hr><br>
+    <hr>
     <div class="small">
       Suggestions, errors or bugs?
       <br>

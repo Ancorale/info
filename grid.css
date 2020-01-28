@@ -1,23 +1,25 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(8, 100px);
-  grid-template-rows: repeat(8, 100px);
-  grid-gap: 35px;
+  grid-template-rows: auto;
+  grid-gap: 2em;
 }
 
 /* right margin */
-.one889{
+.one889 {
   grid-area: 1 / 8 / 8 / 9;
 }
-
 /* one */
-.one127{
+.one127 {
   grid-area: 1 / 1 / 2 / 7;
+}
+.one128 {
+  grid-area: 1 / 1 / 2 / 8;
 }
 .one123 {
   grid-area: 1 / 1 / 2 / 3;
 }
-.one224{
+.one224 {
   grid-area: 1 / 2 / 2 / 4;
 }
 .one428 {
@@ -37,12 +39,12 @@
 .two536 {
   grid-area: 2 / 5 / 3 / 6;
 }
-.two638{
+.two638 {
   grid-area: 2 / 5 / 3 / 8;
 }
 
 /* three */
-.three133{
+.three133 {
   grid-area: 3 / 1 / 3 / 4;
 }
 .three344 {
@@ -54,12 +56,12 @@
 .three546 {
   grid-area: 3 / 5 / 4 / 6;
 }
-.three648{
+.three648 {
   grid-area: 3 / 5 / 4 / 8;
 }
 
 /* four */
-.four153{
+.four153 {
   grid-area: 4 / 1 / 5 / 4;
 }
 .four354 {
@@ -116,16 +118,21 @@
 }
 
 /* eight */
-.eight183 {
-  grid-area: 8 / 1 / 8 / 4;
+.eight194 {
+  grid-area: 8 / 1 / 9 / 4;
 }
 .eight386 {
   grid-area: 8 / 3 / 8 / 6;
 }
-.eight688 {
-  grid-area: 8 / 5 / 8 / 8;
+.eight698 {
+  grid-area: 8 / 5 / 9 / 8;
 }
 /* nine */
-.nine1108 {
-  grid-area: 9 / 1 / 10 / 8;
+.nine3610 {
+  grid-area: 9 / 3 / 10 / 6;
+}
+
+/* ten */
+.ten1118 {
+  grid-area: 10 / 1 / 11 / 8;
 }

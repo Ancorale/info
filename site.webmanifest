@@ -1,0 +1,37 @@
+{
+  "name": "CCFDInfo",
+  "short_name": "CCFDInfo",
+  "icons": [
+    {
+      "src": "/android-chrome-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "safari-pinned-tab.svg",
+      "sizes": "300x300",
+      "type": "image/svg"
+    },
+    {
+      "src": "mstile-150x150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=a2hs",
+  "orientation": "portrait",
+  "theme_color": "#00f",
+  "background_color": "#333",
+  "display": "fullscreen"
+
+}
